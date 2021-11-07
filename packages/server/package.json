@@ -1,0 +1,32 @@
+{
+  "name": "@fb/server",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Jamen1147 <jamen1147@gmail.com>",
+  "homepage": "https://github.com/Jamen1147/FB#readme",
+  "license": "MIT",
+  "main": "lib/server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamen1147/FB.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Jamen1147/FB/issues"
+  },
+  "dependencies": {
+    "@fb/common": "^0.0.0"
+  }
+}
