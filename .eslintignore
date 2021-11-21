@@ -1,0 +1,7 @@
+build/
+dist/
+packages/**/*.stories.tsx
+packages/**/*.spec.ts
+packages/**/*.spec.tsx
+**/*.d.ts
+packages/client/src/reportWebVitals.ts
