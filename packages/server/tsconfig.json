@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "outDir": "./build",
+    "rootDirs": ["./src", "./tests"],
+    "types": ["node", "mocha"],
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "files": true
+  }
+}
