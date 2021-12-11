@@ -5,3 +5,5 @@ packages/**/*.spec.ts
 packages/**/*.spec.tsx
 **/*.d.ts
 packages/client/src/reportWebVitals.ts
+packages/client/scripts/*.js
+packages/client/config/*.js

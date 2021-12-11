@@ -19,6 +19,17 @@
   "rules": {
     "no-unused-vars": "off",
     "no-shadow": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
+   "max-classes-per-file": "off",
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-unused-vars": [
       1,
@@ -28,5 +39,12 @@
         "ignoreRestSiblings": true
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }
