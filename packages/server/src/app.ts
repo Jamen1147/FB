@@ -6,6 +6,7 @@ import env from './helpers/env';
 import { NotFound } from './helpers/httpError';
 import errorHandler from './middlewares/errorHandler';
 import responseWrapper from './middlewares/responseWrapper';
+import userRouter from './routes/user';
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(responseWrapper);
 
 // Routes
+app.use('/api/v1/user', userRouter);
 
 // Not Found
 app.use((_, __, next) => next(new NotFound('Request Not Found')));
