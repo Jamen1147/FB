@@ -19,6 +19,7 @@
   "rules": {
     "no-unused-vars": "off",
     "no-shadow": "off",
+    "no-return-await": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
