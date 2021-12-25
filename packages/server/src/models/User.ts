@@ -1,5 +1,5 @@
 import { Document, model } from 'mongoose';
-import { User as UserBase } from '@fb/common/types';
+import { User as UserBase } from '@fb/common';
 import Database from '../helpers/database';
 
 export interface User extends UserBase, Document {
