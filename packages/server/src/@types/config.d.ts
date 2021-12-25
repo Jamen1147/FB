@@ -9,6 +9,11 @@ interface ExtendedConfig {
   server: {
     port: number;
   };
+  jwt: {
+    secret: string;
+    expiresIn: string;
+    issuer: string;
+  };
 }
 
 declare module 'config' {
