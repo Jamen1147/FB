@@ -1,0 +1,15 @@
+{
+  "server": {
+    "port": 5000
+  },
+  "db": {
+    "user": "jamen-root",
+    "password": "",
+    "name": "fb"
+  },
+  "jwt": {
+    "secret": "this is a secret",
+    "expiresIn": "1h",
+    "issuer": "demo"
+  }
+}
