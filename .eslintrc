@@ -20,6 +20,7 @@
     "no-unused-vars": "off",
     "no-shadow": "off",
     "no-return-await": "off",
+    "lines-between-class-members": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
