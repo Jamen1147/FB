@@ -20,7 +20,8 @@
     "url": "git+https://github.com/Jamen1147/FB.git"
   },
   "scripts": {
-    "test": "echo 'server tested' && exit 0",
+    "test": "NODE_ENV=test jest --coverage",
+    "test:integration": "NODE_ENV=test jest integration/**/*.spec.ts",
     "start": "NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node --files' src/app.ts"
   },
   "bugs": {
@@ -63,8 +64,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "26.6.0",
     "nodemon": "^2.0.15",
-    "nyc": "^15.1.0",
-    "power-assert": "^1.6.1",
     "supertest": "^6.1.6",
     "ts-node": "^10.4.0"
   }
