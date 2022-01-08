@@ -5,6 +5,7 @@ import Database from '../helpers/database';
 export interface User extends UserBase, Document {
   id: string;
   password: string;
+  tokenRevision: number;
 }
 
 const UserSchema = Database.createSchema({
@@ -20,6 +21,10 @@ const UserSchema = Database.createSchema({
   password: {
     type: String,
     required: true,
+  },
+  tokenRevision: {
+    type: Number,
+    default: 1,
   },
   createdAt: {
     type: Date,

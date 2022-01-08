@@ -1,4 +1,5 @@
 import { Router, Request } from 'express';
+import { REFRESH_TOKEN_KEY, TOKEN_KEY } from '../../constants/cookie';
 import authenticate from '../../middlewares/authentication';
 import services from '../../services';
 import { RegisterParams } from '../../services/user';
@@ -21,5 +22,17 @@ router.post(
       .catch(next);
   }
 );
+
+router.delete('/', authenticate, (req, res, next) => {
+  services.user
+    .unregister(req.user.id)
+    .then(() => {
+      res.clearCookie(TOKEN_KEY);
+      res.clearCookie(REFRESH_TOKEN_KEY);
+      return true;
+    })
+    .then(res.success)
+    .catch(next);
+});
 
 export default router;

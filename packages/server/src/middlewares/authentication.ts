@@ -11,7 +11,7 @@ const authenticate = async (
   try {
     const token = req.cookies[TOKEN_KEY] as string;
     if (!token) throw new Unauthorized('Unauthorized');
-    const decoded = services.auth.verify({ token });
+    const decoded = await services.auth.verify({ token, checkVersion: false });
     req.user = decoded.user;
     next();
   } catch (error) {

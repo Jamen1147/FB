@@ -13,6 +13,10 @@ interface ExtendedConfig {
     secret: string;
     expiresIn: string;
     issuer: string;
+    refresh: {
+      secret: string;
+      expiresIn: string;
+    };
   };
 }
 
