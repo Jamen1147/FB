@@ -10,6 +10,10 @@
   "jwt": {
     "secret": "this is a secret",
     "expiresIn": "1h",
-    "issuer": "demo"
+    "issuer": "demo",
+    "refresh": {
+      "secret": "refresh secret",
+      "expiresIn": "1d"
+    }
   }
 }
