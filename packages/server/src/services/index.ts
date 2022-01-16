@@ -1,6 +1,6 @@
 import repositories from '../repositories';
-import AuthenticationService from './auth';
-import UserService from './user';
+import AuthenticationService from './auth/auth';
+import UserService from './user/user';
 
 class Services {
   readonly user: UserService;

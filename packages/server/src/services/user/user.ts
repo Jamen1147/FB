@@ -1,7 +1,7 @@
-import { hashPassword } from '../helpers/auth';
-import { Conflict } from '../helpers/httpError';
-import { User } from '../models/User';
-import UserRepository from '../repositories/user';
+import { hashPassword } from '../../helpers/auth';
+import { Conflict } from '../../helpers/httpError';
+import { User } from '../../models/User';
+import UserRepository from '../../repositories/user';
 
 export type RegisterParams = Pick<User, 'name' | 'email' | 'password'>;
 

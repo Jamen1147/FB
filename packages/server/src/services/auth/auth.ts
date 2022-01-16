@@ -1,8 +1,8 @@
 import { LoginParams } from '@fb/common';
 import config from 'config';
-import { comparePassword, sign, verifyToken } from '../helpers/auth';
-import { NotFound, Unauthorized } from '../helpers/httpError';
-import UserRepository from '../repositories/user';
+import { comparePassword, sign, verifyToken } from '../../helpers/auth';
+import { NotFound, Unauthorized } from '../../helpers/httpError';
+import UserRepository from '../../repositories/user';
 
 export default class AuthenticationService {
   private readonly user: UserRepository;
