@@ -20,12 +20,40 @@
     "url": "git+https://github.com/Jamen1147/FB.git"
   },
   "scripts": {
-    "test": "echo 'components tested' && exit 0"
+    "test": "echo 'components tested' && exit 0",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "bugs": {
     "url": "https://github.com/Jamen1147/FB/issues"
   },
   "dependencies": {
-    "@fb/common": "^0.0.0"
+    "@fb/common": "^0.0.0",
+    "lodash.mergewith": "^4.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@emotion/babel-plugin": "^11.7.2",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.4.1",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "@types/lodash.mergewith": "^4.6.6",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

@@ -8,13 +8,13 @@ const getMe: RequestHandler = (req, res, next) =>
 
 const register: RequestHandler<any, any, RegisterParams> = (req, res, next) => {
   const { email, password, name } = req.body;
-  services.user
+  return services.user
     .register({ email, password, name })
     .then(res.success)
     .catch(next);
 };
 
-const unregister: RequestHandler = (req, res, next) => {
+const unregister: RequestHandler = (req, res, next) =>
   services.user
     .unregister(req.user.id)
     .then(() => {
@@ -24,7 +24,6 @@ const unregister: RequestHandler = (req, res, next) => {
     })
     .then(res.success)
     .catch(next);
-};
 
 export default {
   getMe,
