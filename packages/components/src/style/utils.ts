@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
-import breakpoints, { ScreenSize } from './breakpoint';
-import { htmlSize } from './theme';
+import { htmlFontSize } from './theme';
 
 const hexToRgb = (hex: string) => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -30,14 +29,10 @@ export const rgba = (hex?: string, alpha = 1) => {
   return `rgba(0,0,0,${alpha})`;
 };
 
-export const breakpoint = (direction: 'up' | 'down', size: ScreenSize) =>
-  `@media (${direction === 'up' ? 'min' : 'max'}-width: ${
-    breakpoints[size]
-  }px)`;
+export const spacing = (n: number) =>
+  `${(n * (8 / htmlFontSize)).toFixed(2)}rem`;
 
-export const spacing = (n: number) => `${(n * (8 / htmlSize)).toFixed(2)}rem`;
-
-export const toRem = (px: number) => `${(px / htmlSize).toFixed(2)}rem`;
+export const toRem = (px: number) => `${(px / htmlFontSize).toFixed(2)}rem`;
 
 export const lineClamp = (lines: number) => css`
   overflow: hidden;

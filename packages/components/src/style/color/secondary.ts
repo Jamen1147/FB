@@ -1,9 +1,9 @@
-import { ColorGroup } from '.';
+import { PaletteColorOptions } from '@mui/material';
 
-const secondary: ColorGroup = {
-  100: '#FEFBF5',
-  200: '#FDF4E6',
-  300: '#FBEBD2',
-  400: '#EFD4AA',
+const secondary: PaletteColorOptions = {
+  light: '#FDF4E6',
+  main: '#FBEBD2',
+  dark: '#EFD4AA',
 };
+
 export default secondary;

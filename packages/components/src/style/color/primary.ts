@@ -1,8 +1,8 @@
-import { ColorGroup } from '.';
+import { PaletteColorOptions } from '@mui/material';
 
-const primary: ColorGroup = {
-  200: '#7B66AE',
-  300: '#230078',
+const primary: PaletteColorOptions = {
+  light: '#7B66AE',
+  main: '#230078',
 };
 
 export default primary;

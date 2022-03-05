@@ -1,49 +1,84 @@
+import { createTheme, ThemeOptions } from '@mui/material';
 import { primary, secondary } from './color';
-import { breakpoint, spacing, toRem, rgba } from './utils';
+import { toRem } from './utils';
 
-export const htmlSize = 10;
+export const htmlFontSize = 10;
 
-const theme = {
-  fonts: {
-    weight: {
-      default: 400,
-      title: 700,
-      base: 400,
-      label: 600,
-      lightLabel: 500,
-      h: 800,
-      p: 400,
+const baseTheme: ThemeOptions = {
+  typography: {
+    htmlFontSize,
+    h1: {
+      fontWeight: 800,
+      fontSize: toRem(72),
+      lineHeight: 80,
     },
-    sizes: {
-      default: htmlSize,
-      title: 18,
-      base: 16,
-      label: 12,
-      h1: 72,
-      h2: 52,
-      h3: 40,
-      h5: 20,
-      h6: 16,
-      p1: 20,
+    h2: {
+      fontWeight: 800,
+      fontSize: toRem(52),
+      lineHeight: 64,
     },
-    lineHeights: {
-      default: 1.35,
-      h1: 80,
-      h2: 64,
-      h3: 56,
-      h5: 32,
-      h6: 24,
-      p1: 32,
+    h3: {
+      fontWeight: 800,
+      fontSize: toRem(40),
+      lineHeight: 56,
+    },
+    h4: {
+      fontWeight: 800,
+      fontSize: toRem(30),
+      lineHeight: 40,
+    },
+    h5: {
+      fontWeight: 800,
+      fontSize: toRem(20),
+      lineHeight: 32,
+    },
+    h6: {
+      fontWeight: 800,
+      fontSize: toRem(16),
+      lineHeight: 24,
+    },
+    subtitle1: {
+      fontWeight: 600,
+      fontSize: toRem(18),
+      lineHeight: 24,
+    },
+    subtitle2: {
+      fontWeight: 500,
+      fontSize: toRem(16),
+      lineHeight: 24,
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: toRem(16),
+      lineHeight: 24,
+    },
+    body2: {
+      fontWeight: 400,
+      fontSize: toRem(12),
+      lineHeight: 24,
+    },
+    button: {
+      fontWeight: 500,
+      fontSize: toRem(16),
+      lineHeight: 24,
     },
   },
-  colors: {
+  palette: {
     primary,
     secondary,
   },
-  breakpoint,
-  spacing,
-  toRem,
-  rgba,
+  spacing: 8,
+  breakpoints: {
+    values: {
+      xs: 400,
+      sm: 690,
+      md: 960,
+      lg: 1080,
+      xl: 1400,
+    },
+  },
 };
+
+const theme = createTheme(baseTheme);
 
 export default theme;
