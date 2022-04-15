@@ -1,3 +1,2 @@
-const testing = 1;
-
-export default testing;
+export * from './components';
+export * from './style';

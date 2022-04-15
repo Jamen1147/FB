@@ -68,6 +68,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
+  fbComponents: resolveApp('../../packages/components'),
 };
 
 module.exports.moduleFileExtensions = moduleFileExtensions;
